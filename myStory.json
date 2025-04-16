@@ -1,58 +1,200 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Kvartira",
+    "Credits": "Created by Anton Zhuk (anzhuk@ucsc.edu)",
+    "InitialLocation": "Street Level",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Street Level": {
+            "Body": "You stand outside of your apartment block, a bleak concrete slab in an ocean of other blocks that look just the same. You feel a strange feeling of pins-and-needles at your fingertips. Probably just exhaustion. Time to go home.",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
-                }
-            ]
-        },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Go inside",
+                    "Target": "Apartment Block Entrance"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Text": "Walk around",
+                    "Target": "Yard"
                 }
             ]
         },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
+        "Yard": {
+            "Body": "You walk around your block into a grassy clearing in the middle. You look around and don't see a single person. A playground stands unused in the middle.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Go to the playground",
+                    "Target": "Playground"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "Go to the apartment block",
+                    "Target": "Street Level"
                 }
             ]
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "Playground": {
+            "Body": "You walk towards the playground. The chains of the swingset give off a metallic creak every time the wind blows. You notice a pile of tanbark underneath the structure.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Check under the structure",
+                    "Target": "Under The Structure"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Go to the skating ring",
+                    "Target": "Out-Of-Season Skating Ring"
+                },
+                {
+                    "Text": "Step back",
+                    "Target": "Yard"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "Under The Structure": {
+            "Body": "You dig into the tanbark pile and find...",
+            "KeyItem": "Apartment Key",
+            "Choices": [
+                {
+                    "Text": "Step back",
+                    "Target": "Playground"
+                }
+            ]
+        },
+        "Out-Of-Season Skating Ring": {
+            "Body": "You decide to take a detour to the skating ring in the yard. You used to take your nephew here during his Winter Break... and before your sister's family moved to the United States. Now, there's nothing here but memories...",
+            "Choices": [
+                {
+                    "Text": "Step back",
+                    "Target": "Playground"
+                }
+            ]
+        },
+        "Apartment Block Entrance": {
+            "Body": "You step into the entrance of your apartment block. The musty smell of alcohol and urine ambushes your nose, but you've learned to stop caring.",
+            "Choices": [
+                {
+                    "Text": "Step outside",
+                    "Target": "Street Level"
+                },
+                {
+                    "Text": "Step into elevator",
+                    "Target": "Elevator"
+                }
+            ]
+        },
+        "Elevator": {
+            "Body": "You enter the elevator, a janky Soviet-era model with rotten wooden paneling and a notice board full of ripped off flyers.",
+            "Choices": [
+                {
+                    "Text": "Go to the entrance",
+                    "Target": "Apartment Block Entrance"
+                },
+                {
+                    "Text": "Go to the 27th floor",
+                    "Target": "27th Floor"
+                }
+            ]
+        },
+        "27th Floor": {
+            "Body": "You stand on the 27th floor, your floor. Finally, for the first time today, you might just be able to relax.",
+            "Choices": [
+                {
+                    "Text": "Go to your door",
+                    "Target": "Your Door",
+                    "RequiredKey": "Apartment Key"
+                },
+                {
+                    "Text": "Go back into the elevator",
+                    "Target": "Elevator"
+                }
+            ]
+        },
+        "Your Door": {
+            "Body": "The worn, leather-padded exterior of your apartment unit's door stares back at you. It's locked, just how you left it.",
+            "Choices": [
+                {
+                    "Text": "Go to your neighbor to the right",
+                    "Target": "Righthand Neighbor's Door"
+                },
+                {
+                    "Text": "Go to your neighbor to the left",
+                    "Target": "Lefthand Neighbor's Door"
+                },
+                {
+                    "Text": "Go inside",
+                    "Target": "Hallway"
+                },
+                {
+                    "Text": "Step back",
+                    "Target": "27th Floor"
+                }
+            ]
+        },
+        "Righthand Neighbor's Door": {
+            "Body": "You stand in front of Vadim Lakashov's unit, an acquaintance of your's from the floor. He's an older guy, a veteran. Gotta respect a guy that does the mandatory service then comes back for seconds. Though, now that you think about it, his unit is uncharacteristically quiet behind the door.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Your Door"
+                }
+            ]
+        },
+        "Lefthand Neighbor's Door": {
+            "Body": "You stand in front of Irina Sashomenko's unit. She has three kids and all of them are little brats. Just have to make sure you don't let her hear you say that. At least they're quiet today...",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Your Door"
+                }
+            ]
+        },
+        "Hallway": {
+            "Body": "Finally, home. You stand in the hallway of your unit. Maybe it's time to eat something, watch some television, and go to bed.",
+            "Choices": [
+                {
+                    "Text": "Go to the kitchen",
+                    "Target": "Kitchen"
+                },
+                {
+                    "Text": "Go to the living room",
+                    "Target": "Living Room"
+                },
+                {
+                    "Text": "Go to the bedroom",
+                    "Target": "Bedroom"
+                }
+            ]
+        },
+        "Kitchen": {
+            "Body": "You enter your kitchen. The appliances barely work and you're barely scrapping by on just rent.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Hallway"
+                }
+            ]
+        },
+        "Living Room": {
+            "Body": "You enter your living room. An old box television sits on a wooden cabinet facing a couch that's seen better days. A photo of you with your family hangs on the wall.",
+            "SceneType": "TVScene",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Hallway"
+                }
+            ]
+        },
+        "Bedroom": {
+            "Body": "You stand in your bedroom, the window showing off the other apartment block opposite of yours under a flat grey sky. Your bed is haphazardly made from this morning, perfect for laying back down in and drifting off to sleep.",
+            "Choices": [
+                {
+                    "Text": "Go to sleep",
+                    "Target": "Bed"
+                },
+                {
+                    "Text": "Go back",
+                    "Target": "Hallway"
+                }
+            ]
+        },
+        "Bed": {
+            "Body": "The sight of your bed brings you momentary relief, which is quickly replaced with the thought of tomorrow's workday."
         }
     }
 }

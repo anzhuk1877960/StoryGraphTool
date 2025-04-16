@@ -13,6 +13,12 @@ class Engine {
         this.output = document.body.appendChild(document.createElement("div"));
         this.actionsContainer = document.body.appendChild(document.createElement("div"));
 
+        this.state = {
+            hasEaten: false,
+            hasWatchedTV: false,
+            tvViews: 0
+        };
+
         fetch(storyDataUrl).then(
             (response) => response.json()
         ).then(
@@ -24,8 +30,18 @@ class Engine {
     }
 
     gotoScene(sceneClass, data) {
-        this.scene = new sceneClass(this);
-        this.scene.create(data);
+        if (typeof data === "string") {
+            const locationData = this.storyData.Locations[data];
+            if (locationData.SceneType === "TVScene") {
+                this.scene = new TVScene(this);
+            } else {
+                this.scene = new sceneClass(this);
+            }
+            this.scene.create(data);
+        } else {
+            this.scene = new sceneClass(this);
+            this.scene.create(data);
+        }
     }
 
     addChoice(action, data) {

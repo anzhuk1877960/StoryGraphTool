@@ -66,7 +66,7 @@
             ]
         },
         "Apartment Block Entrance": {
-            "Body": "You step into the entrance of your apartment block. The musty smell of alcohol and urine ambushes your nose, but you've learned to stop caring.",
+            "Body": "You step into the entrance of your apartment block. The musty smell of alcohol and dirt ambushes your nose, but you've learned to stop caring.",
             "Choices": [
                 {
                     "Text": "Step outside",
@@ -127,7 +127,7 @@
             ]
         },
         "Righthand Neighbor's Door": {
-            "Body": "You stand in front of Vadim Lakashov's unit, an acquaintance of your's from the floor. He's an older guy, a veteran. Gotta respect a guy that does the mandatory service then comes back for seconds. Though, now that you think about it, his unit is uncharacteristically quiet behind the door.",
+            "Body": "You stand in front of your righthand neighbor's unit, an acquaintance of your's from the floor. He's an older guy, a veteran. Gotta respect a guy that does the mandatory service then comes back for seconds. Though, now that you think about it, his unit is uncharacteristically quiet behind the door.",
             "Choices": [
                 {
                     "Text": "Go back",
@@ -136,7 +136,7 @@
             ]
         },
         "Lefthand Neighbor's Door": {
-            "Body": "You stand in front of Irina Sashomenko's unit. She has three kids and all of them are little brats. Just have to make sure you don't let her hear you say that. At least they're quiet today...",
+            "Body": "You stand in front of your lefthand neighbor's unit. She has three kids and all of them annoy you. Just have to make sure you don't let her hear you say that. At least they're quiet today...",
             "Choices": [
                 {
                     "Text": "Go back",
